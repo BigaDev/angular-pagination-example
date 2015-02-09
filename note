@@ -1,0 +1,11 @@
+ //search 
+    /*$scope.changeFilterProp = function (row) {
+    	var filterProp = $scope.filterProp;
+    	if (filterProp == "name") {
+    		return !!((row.name.indexOf($scope.query || '') !== -1 ));
+    	}
+    	if (filterProp == "phoneNumber") {
+    		return !!((row.phoneNumber.indexOf($scope.query || '') !== -1 ));
+    	}
+    	return !!((row.name.indexOf($scope.query || '') !== -1 || row.phoneNumber.indexOf($scope.query || '') !== -1));
+    };*/s

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-md-10">
+			<form name="form" class="css-form" novalidate>
+		    	Name <input type="text" id="name" name="name" ng-model="person.name" ng-minlength="5" ng-maxlength="100" required><br/>
+		    	<div ng-show="form.$submitted">
+      				<div ng-show="form.name.$error.required" >please fill name field.</div>
+    			</div>
+		    	Phone Number <input type="text" id="phoneNumber" name="phoneNumber" ng-model="person.phoneNumber" ng-minlength="5" ng-maxlength="25" required><br/>
+		    	<div ng-show="form.$submitted">
+      				<div ng-show="form.phoneNumber.$error.required">please fill phoneNumber field.</div>
+    			</div>
+		    	<button ng-click="submit(person, form)">Save</button>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1 @@
+for ((i=1;i<=100;i++)); do   curl -H "Content-Type: application/json" -d '{"name":"user'$i'","phoneNumber":"'$i'"}' localhost:3000/api/persons; done

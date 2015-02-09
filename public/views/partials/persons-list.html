@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10">
+      number of pages ## {{numOfPages}}
+    	Search: <input ng-model="query" ng-change="search()">
+      <!--<select ng-model="filterProp" ng-change="changeFilterProp">
+        <option value="all">All</option>
+        <option value="name">Name</option>
+        <option value="phoneNumber">Phone Number</option>
+      </select>-->
+      Per: <input ng-model="numOfPersons" ng-change="updateView()" type="number" min="1" max="1000" >
+      <hr>
+      <div class="table-responsive">
+  		<table class="table">
+  			<thead>
+        	<tr>
+        		<th style="display:none;">
+              ID
+            </th>
+      			<th>name</th>
+        		<th>phone number</th>
+         		<th>----</th>
+       		</tr>
+    		</thead>
+       	<tbody>
+      		<tr ng-repeat="person in viewPersons">
+       			<td style="display:none;">{{$index}}</td>
+        		<td id="name" ng-model="person.name" editable-text="person.name" title="Click to edit">{{person.name}} </td>
+        		<td id="phoneNumber" ng-model="person.phoneNumber" editable-text="person.phoneNumber" title="Click to edit"> {{person.phoneNumber}}</td>
+        		<td> <a href="" ng-click="updatePerson(person)">update</a> | <a href="" ng-click="deletePerson(person)">delete</a></td>
+      		</tr>
+      	</tbody>
+  		</table>
+		  </div>
+      <span ng-repeat="n in [] | range:numOfPages">
+        <a href="" ng-click="paginate(n)">{{n+1}}</a>
+      </span>
+    </div>
+  </div>
+</div>
