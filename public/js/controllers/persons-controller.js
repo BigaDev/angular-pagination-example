@@ -12,7 +12,7 @@ phonebookControllers.controller('PersonsListCtrl', ['$scope', '$http', 'filterFi
     $scope.startPageIndex = 0;
     $scope.numOfPages = 0;
     $scope.currentPageNum = 0;
-
+    $scope.tdate = new Date()
   	//define persons array
   	$scope.persons = {}; // all persons
     $scope.matchedPersons = {}; // match persons based on search words
